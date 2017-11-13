@@ -1,0 +1,796 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4026F68D1FB91E0500093D87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F68C1FB91E0500093D87 /* AppDelegate.swift */; };
+		4026F68F1FB91E0500093D87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F68E1FB91E0500093D87 /* ViewController.swift */; };
+		4026F6921FB91E0500093D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4026F6901FB91E0500093D87 /* Main.storyboard */; };
+		4026F6941FB91E0500093D87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4026F6931FB91E0500093D87 /* Assets.xcassets */; };
+		4026F6971FB91E0500093D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4026F6951FB91E0500093D87 /* LaunchScreen.storyboard */; };
+		4026F6A21FB91E0500093D87 /* Edibili_Buddy_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6A11FB91E0500093D87 /* Edibili_Buddy_ProjectTests.swift */; };
+		4026F6AD1FB91E0500093D87 /* Edibili_Buddy_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6AC1FB91E0500093D87 /* Edibili_Buddy_ProjectUITests.swift */; };
+		4026F6C11FB91F8500093D87 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6BA1FB91F8300093D87 /* PreviewView.swift */; };
+		4026F6C21FB91F8500093D87 /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6BB1FB91F8400093D87 /* SwiftyRecordButton.swift */; };
+		4026F6C31FB91F8500093D87 /* SwiftyCamViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6BC1FB91F8400093D87 /* SwiftyCamViewControllerDelegate.swift */; };
+		4026F6C41FB91F8500093D87 /* SwiftyCamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6BD1FB91F8400093D87 /* SwiftyCamButton.swift */; };
+		4026F6C51FB91F8500093D87 /* SwiftyCamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6BE1FB91F8400093D87 /* SwiftyCamViewController.swift */; };
+		4026F6C61FB91F8500093D87 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6BF1FB91F8400093D87 /* VideoViewController.swift */; };
+		4026F6C71FB91F8500093D87 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6C01FB91F8500093D87 /* PhotoViewController.swift */; };
+		665C01E1425749B162627A21 /* Pods_Edibili_Buddy_ProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A5ED3F044DE7D000C1DDAD /* Pods_Edibili_Buddy_ProjectTests.framework */; };
+		A17A0D3274F7CBBEDB229363 /* Pods_Edibili_Buddy_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DF0B4BB73FF0506A1D2A3E /* Pods_Edibili_Buddy_Project.framework */; };
+		EE8F7D500AA595A5138794E5 /* Pods_Edibili_Buddy_ProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4939D96D5C925EC87A98E112 /* Pods_Edibili_Buddy_ProjectUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4026F69E1FB91E0500093D87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4026F6811FB91E0500093D87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4026F6881FB91E0500093D87;
+			remoteInfo = "Edibili-Buddy-Project";
+		};
+		4026F6A91FB91E0500093D87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4026F6811FB91E0500093D87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4026F6881FB91E0500093D87;
+			remoteInfo = "Edibili-Buddy-Project";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		184131D982B6717476658F71 /* Pods-Edibili-Buddy-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-Project/Pods-Edibili-Buddy-Project.debug.xcconfig"; sourceTree = "<group>"; };
+		18DF0B4BB73FF0506A1D2A3E /* Pods_Edibili_Buddy_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Edibili_Buddy_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A5ED3F044DE7D000C1DDAD /* Pods_Edibili_Buddy_ProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Edibili_Buddy_ProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A3CB91DADE430FC35552A36 /* Pods-Edibili-Buddy-ProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-ProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-ProjectTests/Pods-Edibili-Buddy-ProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4026F6891FB91E0500093D87 /* Edibili-Buddy-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edibili-Buddy-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4026F68C1FB91E0500093D87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4026F68E1FB91E0500093D87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4026F6911FB91E0500093D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4026F6931FB91E0500093D87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4026F6961FB91E0500093D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4026F6981FB91E0500093D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4026F69D1FB91E0500093D87 /* Edibili-Buddy-ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Edibili-Buddy-ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4026F6A11FB91E0500093D87 /* Edibili_Buddy_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edibili_Buddy_ProjectTests.swift; sourceTree = "<group>"; };
+		4026F6A31FB91E0500093D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4026F6A81FB91E0500093D87 /* Edibili-Buddy-ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Edibili-Buddy-ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4026F6AC1FB91E0500093D87 /* Edibili_Buddy_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edibili_Buddy_ProjectUITests.swift; sourceTree = "<group>"; };
+		4026F6AE1FB91E0500093D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4026F6BA1FB91F8300093D87 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		4026F6BB1FB91F8400093D87 /* SwiftyRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRecordButton.swift; sourceTree = "<group>"; };
+		4026F6BC1FB91F8400093D87 /* SwiftyCamViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyCamViewControllerDelegate.swift; sourceTree = "<group>"; };
+		4026F6BD1FB91F8400093D87 /* SwiftyCamButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyCamButton.swift; sourceTree = "<group>"; };
+		4026F6BE1FB91F8400093D87 /* SwiftyCamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyCamViewController.swift; sourceTree = "<group>"; };
+		4026F6BF1FB91F8400093D87 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		4026F6C01FB91F8500093D87 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		4939D96D5C925EC87A98E112 /* Pods_Edibili_Buddy_ProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Edibili_Buddy_ProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58BD5C8F7419D555EF20BD6D /* Pods-Edibili-Buddy-ProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-ProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-ProjectUITests/Pods-Edibili-Buddy-ProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		69438ED282378FF8FB753E4F /* Pods-Edibili-Buddy-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-Project/Pods-Edibili-Buddy-Project.release.xcconfig"; sourceTree = "<group>"; };
+		944A86B406F4476708A90E50 /* Pods-Edibili-Buddy-ProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-ProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-ProjectUITests/Pods-Edibili-Buddy-ProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4E23E0B7716A33805E72053 /* Pods-Edibili-Buddy-ProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-ProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-ProjectTests/Pods-Edibili-Buddy-ProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4026F6861FB91E0500093D87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A17A0D3274F7CBBEDB229363 /* Pods_Edibili_Buddy_Project.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4026F69A1FB91E0500093D87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				665C01E1425749B162627A21 /* Pods_Edibili_Buddy_ProjectTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4026F6A51FB91E0500093D87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE8F7D500AA595A5138794E5 /* Pods_Edibili_Buddy_ProjectUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4026F6801FB91E0500093D87 = {
+			isa = PBXGroup;
+			children = (
+				4026F68B1FB91E0500093D87 /* Edibili-Buddy-Project */,
+				4026F6A01FB91E0500093D87 /* Edibili-Buddy-ProjectTests */,
+				4026F6AB1FB91E0500093D87 /* Edibili-Buddy-ProjectUITests */,
+				4026F68A1FB91E0500093D87 /* Products */,
+				F4D65CEABB3298323C6D88A4 /* Pods */,
+				CDD83F541EE8CD5C18B3249D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4026F68A1FB91E0500093D87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4026F6891FB91E0500093D87 /* Edibili-Buddy-Project.app */,
+				4026F69D1FB91E0500093D87 /* Edibili-Buddy-ProjectTests.xctest */,
+				4026F6A81FB91E0500093D87 /* Edibili-Buddy-ProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4026F68B1FB91E0500093D87 /* Edibili-Buddy-Project */ = {
+			isa = PBXGroup;
+			children = (
+				4026F68C1FB91E0500093D87 /* AppDelegate.swift */,
+				4026F6C01FB91F8500093D87 /* PhotoViewController.swift */,
+				4026F6BA1FB91F8300093D87 /* PreviewView.swift */,
+				4026F6BD1FB91F8400093D87 /* SwiftyCamButton.swift */,
+				4026F6BE1FB91F8400093D87 /* SwiftyCamViewController.swift */,
+				4026F6BC1FB91F8400093D87 /* SwiftyCamViewControllerDelegate.swift */,
+				4026F6BB1FB91F8400093D87 /* SwiftyRecordButton.swift */,
+				4026F6BF1FB91F8400093D87 /* VideoViewController.swift */,
+				4026F68E1FB91E0500093D87 /* ViewController.swift */,
+				4026F6901FB91E0500093D87 /* Main.storyboard */,
+				4026F6931FB91E0500093D87 /* Assets.xcassets */,
+				4026F6951FB91E0500093D87 /* LaunchScreen.storyboard */,
+				4026F6981FB91E0500093D87 /* Info.plist */,
+			);
+			path = "Edibili-Buddy-Project";
+			sourceTree = "<group>";
+		};
+		4026F6A01FB91E0500093D87 /* Edibili-Buddy-ProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				4026F6A11FB91E0500093D87 /* Edibili_Buddy_ProjectTests.swift */,
+				4026F6A31FB91E0500093D87 /* Info.plist */,
+			);
+			path = "Edibili-Buddy-ProjectTests";
+			sourceTree = "<group>";
+		};
+		4026F6AB1FB91E0500093D87 /* Edibili-Buddy-ProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4026F6AC1FB91E0500093D87 /* Edibili_Buddy_ProjectUITests.swift */,
+				4026F6AE1FB91E0500093D87 /* Info.plist */,
+			);
+			path = "Edibili-Buddy-ProjectUITests";
+			sourceTree = "<group>";
+		};
+		CDD83F541EE8CD5C18B3249D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18DF0B4BB73FF0506A1D2A3E /* Pods_Edibili_Buddy_Project.framework */,
+				25A5ED3F044DE7D000C1DDAD /* Pods_Edibili_Buddy_ProjectTests.framework */,
+				4939D96D5C925EC87A98E112 /* Pods_Edibili_Buddy_ProjectUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4D65CEABB3298323C6D88A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				184131D982B6717476658F71 /* Pods-Edibili-Buddy-Project.debug.xcconfig */,
+				69438ED282378FF8FB753E4F /* Pods-Edibili-Buddy-Project.release.xcconfig */,
+				3A3CB91DADE430FC35552A36 /* Pods-Edibili-Buddy-ProjectTests.debug.xcconfig */,
+				D4E23E0B7716A33805E72053 /* Pods-Edibili-Buddy-ProjectTests.release.xcconfig */,
+				944A86B406F4476708A90E50 /* Pods-Edibili-Buddy-ProjectUITests.debug.xcconfig */,
+				58BD5C8F7419D555EF20BD6D /* Pods-Edibili-Buddy-ProjectUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4026F6881FB91E0500093D87 /* Edibili-Buddy-Project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4026F6B11FB91E0500093D87 /* Build configuration list for PBXNativeTarget "Edibili-Buddy-Project" */;
+			buildPhases = (
+				3487BA54181FA2AF9D813857 /* [CP] Check Pods Manifest.lock */,
+				4026F6851FB91E0500093D87 /* Sources */,
+				4026F6861FB91E0500093D87 /* Frameworks */,
+				4026F6871FB91E0500093D87 /* Resources */,
+				13D476CEA4FD14BA56B4F7D5 /* [CP] Embed Pods Frameworks */,
+				F03AFC0048B4FA68C96DF23D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Edibili-Buddy-Project";
+			productName = "Edibili-Buddy-Project";
+			productReference = 4026F6891FB91E0500093D87 /* Edibili-Buddy-Project.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4026F69C1FB91E0500093D87 /* Edibili-Buddy-ProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4026F6B41FB91E0500093D87 /* Build configuration list for PBXNativeTarget "Edibili-Buddy-ProjectTests" */;
+			buildPhases = (
+				31A60C0D2D308B3F8C2B754D /* [CP] Check Pods Manifest.lock */,
+				4026F6991FB91E0500093D87 /* Sources */,
+				4026F69A1FB91E0500093D87 /* Frameworks */,
+				4026F69B1FB91E0500093D87 /* Resources */,
+				281489C5733308291ED2FDBC /* [CP] Embed Pods Frameworks */,
+				FA536E6652DE3622D66239A0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4026F69F1FB91E0500093D87 /* PBXTargetDependency */,
+			);
+			name = "Edibili-Buddy-ProjectTests";
+			productName = "Edibili-Buddy-ProjectTests";
+			productReference = 4026F69D1FB91E0500093D87 /* Edibili-Buddy-ProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4026F6A71FB91E0500093D87 /* Edibili-Buddy-ProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4026F6B71FB91E0500093D87 /* Build configuration list for PBXNativeTarget "Edibili-Buddy-ProjectUITests" */;
+			buildPhases = (
+				1F4FD9BDFCC5B7C063C3C2C0 /* [CP] Check Pods Manifest.lock */,
+				4026F6A41FB91E0500093D87 /* Sources */,
+				4026F6A51FB91E0500093D87 /* Frameworks */,
+				4026F6A61FB91E0500093D87 /* Resources */,
+				6CDEF3D55970EC9E7F5D18BE /* [CP] Embed Pods Frameworks */,
+				9F0A97D73F457F85B3196729 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4026F6AA1FB91E0500093D87 /* PBXTargetDependency */,
+			);
+			name = "Edibili-Buddy-ProjectUITests";
+			productName = "Edibili-Buddy-ProjectUITests";
+			productReference = 4026F6A81FB91E0500093D87 /* Edibili-Buddy-ProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4026F6811FB91E0500093D87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Ashley Roselius";
+				TargetAttributes = {
+					4026F6881FB91E0500093D87 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					4026F69C1FB91E0500093D87 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4026F6881FB91E0500093D87;
+					};
+					4026F6A71FB91E0500093D87 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4026F6881FB91E0500093D87;
+					};
+				};
+			};
+			buildConfigurationList = 4026F6841FB91E0500093D87 /* Build configuration list for PBXProject "Edibili-Buddy-Project" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4026F6801FB91E0500093D87;
+			productRefGroup = 4026F68A1FB91E0500093D87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4026F6881FB91E0500093D87 /* Edibili-Buddy-Project */,
+				4026F69C1FB91E0500093D87 /* Edibili-Buddy-ProjectTests */,
+				4026F6A71FB91E0500093D87 /* Edibili-Buddy-ProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4026F6871FB91E0500093D87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4026F6971FB91E0500093D87 /* LaunchScreen.storyboard in Resources */,
+				4026F6941FB91E0500093D87 /* Assets.xcassets in Resources */,
+				4026F6921FB91E0500093D87 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4026F69B1FB91E0500093D87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4026F6A61FB91E0500093D87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13D476CEA4FD14BA56B4F7D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Edibili-Buddy-Project/Pods-Edibili-Buddy-Project-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyCam/SwiftyCam.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyCam.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Edibili-Buddy-Project/Pods-Edibili-Buddy-Project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F4FD9BDFCC5B7C063C3C2C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Edibili-Buddy-ProjectUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		281489C5733308291ED2FDBC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Edibili-Buddy-ProjectTests/Pods-Edibili-Buddy-ProjectTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31A60C0D2D308B3F8C2B754D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Edibili-Buddy-ProjectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3487BA54181FA2AF9D813857 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Edibili-Buddy-Project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CDEF3D55970EC9E7F5D18BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Edibili-Buddy-ProjectUITests/Pods-Edibili-Buddy-ProjectUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F0A97D73F457F85B3196729 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Edibili-Buddy-ProjectUITests/Pods-Edibili-Buddy-ProjectUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F03AFC0048B4FA68C96DF23D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Edibili-Buddy-Project/Pods-Edibili-Buddy-Project-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA536E6652DE3622D66239A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Edibili-Buddy-ProjectTests/Pods-Edibili-Buddy-ProjectTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4026F6851FB91E0500093D87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4026F6C21FB91F8500093D87 /* SwiftyRecordButton.swift in Sources */,
+				4026F68F1FB91E0500093D87 /* ViewController.swift in Sources */,
+				4026F6C61FB91F8500093D87 /* VideoViewController.swift in Sources */,
+				4026F6C51FB91F8500093D87 /* SwiftyCamViewController.swift in Sources */,
+				4026F68D1FB91E0500093D87 /* AppDelegate.swift in Sources */,
+				4026F6C71FB91F8500093D87 /* PhotoViewController.swift in Sources */,
+				4026F6C41FB91F8500093D87 /* SwiftyCamButton.swift in Sources */,
+				4026F6C11FB91F8500093D87 /* PreviewView.swift in Sources */,
+				4026F6C31FB91F8500093D87 /* SwiftyCamViewControllerDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4026F6991FB91E0500093D87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4026F6A21FB91E0500093D87 /* Edibili_Buddy_ProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4026F6A41FB91E0500093D87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4026F6AD1FB91E0500093D87 /* Edibili_Buddy_ProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4026F69F1FB91E0500093D87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4026F6881FB91E0500093D87 /* Edibili-Buddy-Project */;
+			targetProxy = 4026F69E1FB91E0500093D87 /* PBXContainerItemProxy */;
+		};
+		4026F6AA1FB91E0500093D87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4026F6881FB91E0500093D87 /* Edibili-Buddy-Project */;
+			targetProxy = 4026F6A91FB91E0500093D87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4026F6901FB91E0500093D87 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4026F6911FB91E0500093D87 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4026F6951FB91E0500093D87 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4026F6961FB91E0500093D87 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4026F6AF1FB91E0500093D87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4026F6B01FB91E0500093D87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4026F6B21FB91E0500093D87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 184131D982B6717476658F71 /* Pods-Edibili-Buddy-Project.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HKXG2MJJVF;
+				INFOPLIST_FILE = "Edibili-Buddy-Project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Software-Engeneering-Class.Edibili-Buddy-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4026F6B31FB91E0500093D87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69438ED282378FF8FB753E4F /* Pods-Edibili-Buddy-Project.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HKXG2MJJVF;
+				INFOPLIST_FILE = "Edibili-Buddy-Project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Software-Engeneering-Class.Edibili-Buddy-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4026F6B51FB91E0500093D87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A3CB91DADE430FC35552A36 /* Pods-Edibili-Buddy-ProjectTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HKXG2MJJVF;
+				INFOPLIST_FILE = "Edibili-Buddy-ProjectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Software-Engeneering-Class.Edibili-Buddy-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Edibili-Buddy-Project.app/Edibili-Buddy-Project";
+			};
+			name = Debug;
+		};
+		4026F6B61FB91E0500093D87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4E23E0B7716A33805E72053 /* Pods-Edibili-Buddy-ProjectTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HKXG2MJJVF;
+				INFOPLIST_FILE = "Edibili-Buddy-ProjectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Software-Engeneering-Class.Edibili-Buddy-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Edibili-Buddy-Project.app/Edibili-Buddy-Project";
+			};
+			name = Release;
+		};
+		4026F6B81FB91E0500093D87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 944A86B406F4476708A90E50 /* Pods-Edibili-Buddy-ProjectUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HKXG2MJJVF;
+				INFOPLIST_FILE = "Edibili-Buddy-ProjectUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Software-Engeneering-Class.Edibili-Buddy-ProjectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Edibili-Buddy-Project";
+			};
+			name = Debug;
+		};
+		4026F6B91FB91E0500093D87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58BD5C8F7419D555EF20BD6D /* Pods-Edibili-Buddy-ProjectUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HKXG2MJJVF;
+				INFOPLIST_FILE = "Edibili-Buddy-ProjectUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Software-Engeneering-Class.Edibili-Buddy-ProjectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Edibili-Buddy-Project";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4026F6841FB91E0500093D87 /* Build configuration list for PBXProject "Edibili-Buddy-Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4026F6AF1FB91E0500093D87 /* Debug */,
+				4026F6B01FB91E0500093D87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4026F6B11FB91E0500093D87 /* Build configuration list for PBXNativeTarget "Edibili-Buddy-Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4026F6B21FB91E0500093D87 /* Debug */,
+				4026F6B31FB91E0500093D87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4026F6B41FB91E0500093D87 /* Build configuration list for PBXNativeTarget "Edibili-Buddy-ProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4026F6B51FB91E0500093D87 /* Debug */,
+				4026F6B61FB91E0500093D87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4026F6B71FB91E0500093D87 /* Build configuration list for PBXNativeTarget "Edibili-Buddy-ProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4026F6B81FB91E0500093D87 /* Debug */,
+				4026F6B91FB91E0500093D87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4026F6811FB91E0500093D87 /* Project object */;
+}

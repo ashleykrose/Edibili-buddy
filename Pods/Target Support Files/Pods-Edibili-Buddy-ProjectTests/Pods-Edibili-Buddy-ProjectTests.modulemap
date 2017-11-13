@@ -1,0 +1,6 @@
+framework module Pods_Edibili_Buddy_ProjectTests {
+  umbrella header "Pods-Edibili-Buddy-ProjectTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

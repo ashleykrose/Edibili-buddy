@@ -1,0 +1,6 @@
+framework module Pods_Edibili_Buddy_Project {
+  umbrella header "Pods-Edibili-Buddy-Project-umbrella.h"
+
+  export *
+  module * { export * }
+}
