@@ -895,7 +895,7 @@ open class SwiftyCamViewController: UIViewController {
         }
     }
 }
-
+/////////////////////////THIS IS WHERE I CHANGED CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 extension SwiftyCamViewController : SwiftyCamButtonDelegate {
     
     /// Sets the maximum duration of the SwiftyCamButton
@@ -910,17 +910,20 @@ extension SwiftyCamViewController : SwiftyCamButtonDelegate {
     
     /// Set UILongPressGesture start to begin video
     public func buttonDidBeginLongPress() {
-        //not needed for photos
+//        //not needed for photos
+        startVideoRecording()
     }
     
     /// Set UILongPressGesture begin to begin end video
     public func buttonDidEndLongPress() {
-        takePhoto()
+//        takePhoto()
+        stopVideoRecording()
     }
     
     /// Called if maximum duration is reached
     public func longPressDidReachMaximumDuration() {
-        takePhoto()
+//        takePhoto()
+        stopVideoRecording()
     }
 }
 
