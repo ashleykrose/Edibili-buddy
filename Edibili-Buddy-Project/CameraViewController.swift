@@ -21,7 +21,7 @@ protocol holdImagesToSendToAI {
     func pass(uiImageArray: [UIImage], sendImages: Bool)
 }
 
-class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate, holdImagesToSendToAI {
+class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, holdImagesToSendToAI {
     
     @IBOutlet weak var captureButton: SwiftyRecordButton!
     @IBOutlet weak var flipCameraButton: UIButton!
@@ -32,6 +32,7 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     var delegate: holdImagesToSendToAI?
     var imageArray: [UIImage] = []
     var sendToAI: Bool = false
+    var imagePicked: Bool = false
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -70,6 +71,16 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
             self.tabBarController?.tabBar.isHidden = false
             //after it is sent to the ai we need to go to the gallary
             tabBarController?.selectedIndex = 2
+        }
+        print("imagePicked: ", imagePicked)
+        if imagePicked {
+            imagePicked = false
+            let alert = UIAlertController(title: "From Camera Roll", message: "Picture Added To List", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Add More Pictures", style: UIAlertActionStyle.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Send Pictures", style: UIAlertActionStyle.default, handler: { action in
+                self.sendPicturesToAI()
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
 	}
 
@@ -121,16 +132,62 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     
     @IBAction func cancelTapped(_ sender: Any) {
         //make sure the know their images will disappear
-        let alert = UIAlertController(title: "Cancel Clicked", message: "If you leave page you will lose all your pictures", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Stay", style: UIAlertActionStyle.default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Leave", style: UIAlertActionStyle.cancel, handler: { action in
+        print("Array Size: ", imageArray.count)
+        if imageArray.count != 0 {
+            let alert = UIAlertController(title: "Cancel Clicked", message: "If you leave page you will lose all your pictures", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Stay", style: UIAlertActionStyle.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Leave", style: UIAlertActionStyle.cancel, handler: { action in
+                self.imageArray = []
+                
+                self.tabBarController?.tabBar.isHidden = false
+                
+                self.tabBarController?.selectedIndex = 0
+            }))
+            self.present(alert, animated: true, completion: nil)
+        } else {
             self.imageArray = []
             
             self.tabBarController?.tabBar.isHidden = false
             
             self.tabBarController?.selectedIndex = 0
-        }))
-        self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    //adds image from camera roll to list of images to send to AI
+    @IBAction func openPhotoLibraryButton(sender: AnyObject) {
+        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
+            print("can't open photo library")
+            return
+        }
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        
+        present(imagePicker, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.imageArray.append(image)
+            self.imagePicked = true
+        } else{
+            print("Something went wrong")
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func sendPicturesToAI() {
+        //this is where we are sending the image to the AI.
+        //backgroundImage is the image to send to the AI
+        //empty imageArray after sending them to the AI
+        
+        
+        
+        //pass delegate back
+        self.tabBarController?.tabBar.isHidden = false
+        //after it is sent to the ai we need to go to the gallary
+        tabBarController?.selectedIndex = 2
     }
 }
 

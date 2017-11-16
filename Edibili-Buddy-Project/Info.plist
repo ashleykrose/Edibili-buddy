@@ -24,6 +24,8 @@
 	<string>To Take Photos And Videos</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>To Take Videos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>To Send Photos To The AI</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
