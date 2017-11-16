@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-Edibili-Buddy-Project.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Pods-Edibili-Buddy-ProjectTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-Edibili-Buddy-ProjectUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>SwiftyCam.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9D3B838851D7251F145014715786B505</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E9FD598C9E92BDC3EC18B24110C21D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B30144A1FE987C5D2824FB8CBB589190</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFA5B18F298CC6702EAC8B2EB393B899</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
