@@ -47,29 +47,6 @@ class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
 		self.present(newVC, animated: true, completion: nil)
 	}
 
-	func swiftyCam(_ swiftyCam: SwiftyCamViewController, didBeginRecordingVideo camera: SwiftyCamViewController.CameraSelection) {
-		print("Did Begin Recording")
-		captureButton.growButton()
-		UIView.animate(withDuration: 0.25, animations: {
-			self.flashButton.alpha = 0.0
-			self.flipCameraButton.alpha = 0.0
-		})
-	}
-
-	func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFinishRecordingVideo camera: SwiftyCamViewController.CameraSelection) {
-		print("Did finish Recording")
-		captureButton.shrinkButton()
-		UIView.animate(withDuration: 0.25, animations: {
-			self.flashButton.alpha = 1.0
-			self.flipCameraButton.alpha = 1.0
-		})
-	}
-
-	func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFinishProcessVideoAt url: URL) {
-		let newVC = VideoViewController(videoURL: url)
-		self.present(newVC, animated: true, completion: nil)
-	}
-
 	func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFocusAtPoint point: CGPoint) {
 		let focusView = UIImageView(image: #imageLiteral(resourceName: "focus"))
 		focusView.center = point
@@ -96,10 +73,6 @@ class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
 	func swiftyCam(_ swiftyCam: SwiftyCamViewController, didSwitchCameras camera: SwiftyCamViewController.CameraSelection) {
 		print(camera)
 	}
-    
-    func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFailToRecordVideo error: Error) {
-        print(error)
-    }
 
     @IBAction func cameraSwitchTapped(_ sender: Any) {
         switchCamera()
