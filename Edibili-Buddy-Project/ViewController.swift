@@ -26,7 +26,8 @@ class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		cameraDelegate = self
+		self.tabBarController?.tabBar.isHidden = true
+        cameraDelegate = self
 		maximumVideoDuration = 10.0
         shouldUseDeviceOrientation = true
         allowAutoRotate = true
