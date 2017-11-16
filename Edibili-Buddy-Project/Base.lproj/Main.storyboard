@@ -13,7 +13,7 @@
         <!--Camera Page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Camera Page" id="BYZ-38-t0r" customClass="ViewController" customModule="Edibili_Buddy_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Camera Page" id="BYZ-38-t0r" customClass="CameraViewController" customModule="Edibili_Buddy_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -58,7 +58,10 @@
                                     <constraint firstAttribute="width" constant="30" id="UQF-Ws-BCg"/>
                                     <constraint firstAttribute="height" constant="30" id="tG1-iP-qMP"/>
                                 </constraints>
-                                <state key="normal" title="Cancel Button" image="cancel"/>
+                                <state key="normal" image="cancel"/>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xcD-S8-d9G"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfO-lt-RnU">
                                 <rect key="frame" x="46" y="584" width="30" height="30"/>
@@ -121,7 +124,7 @@
         <!--About Page-->
         <scene sceneID="wbl-m6-A84">
             <objects>
-                <viewController title="About Page" id="gUb-DN-Jwg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aboutPage" title="About Page" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gUb-DN-Jwg" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xQf-DA-HVF"/>
                         <viewControllerLayoutGuide type="bottom" id="HRS-0A-8Yc"/>

@@ -17,7 +17,7 @@ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 import UIKit
 import SwiftyCam
 
-class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
+class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
     
     @IBOutlet weak var captureButton: SwiftyRecordButton!
     @IBOutlet weak var flipCameraButton: UIButton!
@@ -43,6 +43,7 @@ class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
         captureButton.delegate = self
+        self.tabBarController?.tabBar.isHidden = true
 	}
 
 	func swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage) {
@@ -89,6 +90,12 @@ class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
         } else {
             flashButton.setImage(#imageLiteral(resourceName: "flashOutline"), for: UIControlState())
         }
+    }
+    
+    @IBAction func cancelTapped(_ sender: Any) {
+        self.tabBarController?.tabBar.isHidden = false
+        
+        tabBarController?.selectedIndex = 0
     }
 }
 
