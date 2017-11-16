@@ -14,7 +14,6 @@
  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
 
 import UIKit
-import SwiftyCam
 
 class SwiftyRecordButton: SwiftyCamButton {
     
@@ -34,7 +33,7 @@ class SwiftyRecordButton: SwiftyCamButton {
     private func drawButton() {
         self.backgroundColor = UIColor.clear
         
-        circleBorder = CALayer()
+       circleBorder = CALayer()
         circleBorder.backgroundColor = UIColor.clear.cgColor
         circleBorder.borderWidth = 6.0
         circleBorder.borderColor = UIColor.white.cgColor
@@ -42,7 +41,7 @@ class SwiftyRecordButton: SwiftyCamButton {
         circleBorder.position = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
         circleBorder.cornerRadius = self.frame.size.width / 2
         layer.insertSublayer(circleBorder, at: 0)
-        
+
     }
     
     public  func growButton() {
@@ -52,7 +51,7 @@ class SwiftyRecordButton: SwiftyCamButton {
         innerCircle.layer.cornerRadius = innerCircle.frame.size.width / 2
         innerCircle.clipsToBounds = true
         self.addSubview(innerCircle)
-
+        
         UIView.animate(withDuration: 0.6, delay: 0.0, options: .curveEaseOut, animations: {
             self.innerCircle.transform = CGAffineTransform(scaleX: 62.4, y: 62.4)
             self.circleBorder.setAffineTransform(CGAffineTransform(scaleX: 1.352, y: 1.352))
@@ -72,5 +71,3 @@ class SwiftyRecordButton: SwiftyCamButton {
         })
     }
 }
-
-

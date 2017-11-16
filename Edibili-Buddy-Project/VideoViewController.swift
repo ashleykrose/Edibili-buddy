@@ -37,7 +37,7 @@ class VideoViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.gray
@@ -66,7 +66,7 @@ class VideoViewController: UIViewController {
         player?.play()
     }
     
-    @objc func cancel() {
+    func cancel() {
         dismiss(animated: true, completion: nil)
     }
     
@@ -77,5 +77,3 @@ class VideoViewController: UIViewController {
         }
     }
 }
-
-

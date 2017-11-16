@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		4026F68D1FB91E0500093D87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F68C1FB91E0500093D87 /* AppDelegate.swift */; };
-		4026F68F1FB91E0500093D87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F68E1FB91E0500093D87 /* ViewController.swift */; };
 		4026F6921FB91E0500093D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4026F6901FB91E0500093D87 /* Main.storyboard */; };
 		4026F6941FB91E0500093D87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4026F6931FB91E0500093D87 /* Assets.xcassets */; };
 		4026F6971FB91E0500093D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4026F6951FB91E0500093D87 /* LaunchScreen.storyboard */; };
 		4026F6A21FB91E0500093D87 /* Edibili_Buddy_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6A11FB91E0500093D87 /* Edibili_Buddy_ProjectTests.swift */; };
 		4026F6AD1FB91E0500093D87 /* Edibili_Buddy_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6AC1FB91E0500093D87 /* Edibili_Buddy_ProjectUITests.swift */; };
-		4026F6C21FB91F8500093D87 /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6BB1FB91F8400093D87 /* SwiftyRecordButton.swift */; };
-		4026F6C61FB91F8500093D87 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6BF1FB91F8400093D87 /* VideoViewController.swift */; };
-		40D897761FBD0D31003B4486 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D897751FBD0D31003B4486 /* PhotoViewController.swift */; };
+		40D8977B1FBD0FC0003B4486 /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D897771FBD0FC0003B4486 /* SwiftyRecordButton.swift */; };
+		40D8977C1FBD0FC0003B4486 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D897781FBD0FC0003B4486 /* VideoViewController.swift */; };
+		40D8977D1FBD0FC0003B4486 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D897791FBD0FC0003B4486 /* PhotoViewController.swift */; };
+		40D8977E1FBD0FC0003B4486 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8977A1FBD0FC0003B4486 /* ViewController.swift */; };
 		665C01E1425749B162627A21 /* Pods_Edibili_Buddy_ProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A5ED3F044DE7D000C1DDAD /* Pods_Edibili_Buddy_ProjectTests.framework */; };
 		A17A0D3274F7CBBEDB229363 /* Pods_Edibili_Buddy_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DF0B4BB73FF0506A1D2A3E /* Pods_Edibili_Buddy_Project.framework */; };
 		EE8F7D500AA595A5138794E5 /* Pods_Edibili_Buddy_ProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4939D96D5C925EC87A98E112 /* Pods_Edibili_Buddy_ProjectUITests.framework */; };
@@ -46,7 +46,6 @@
 		3A3CB91DADE430FC35552A36 /* Pods-Edibili-Buddy-ProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-ProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-ProjectTests/Pods-Edibili-Buddy-ProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4026F6891FB91E0500093D87 /* Edibili-Buddy-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edibili-Buddy-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4026F68C1FB91E0500093D87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4026F68E1FB91E0500093D87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4026F6911FB91E0500093D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4026F6931FB91E0500093D87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4026F6961FB91E0500093D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,9 +56,10 @@
 		4026F6A81FB91E0500093D87 /* Edibili-Buddy-ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Edibili-Buddy-ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4026F6AC1FB91E0500093D87 /* Edibili_Buddy_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edibili_Buddy_ProjectUITests.swift; sourceTree = "<group>"; };
 		4026F6AE1FB91E0500093D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4026F6BB1FB91F8400093D87 /* SwiftyRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRecordButton.swift; sourceTree = "<group>"; };
-		4026F6BF1FB91F8400093D87 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		40D897751FBD0D31003B4486 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		40D897771FBD0FC0003B4486 /* SwiftyRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRecordButton.swift; sourceTree = "<group>"; };
+		40D897781FBD0FC0003B4486 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		40D897791FBD0FC0003B4486 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		40D8977A1FBD0FC0003B4486 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4939D96D5C925EC87A98E112 /* Pods_Edibili_Buddy_ProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Edibili_Buddy_ProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58BD5C8F7419D555EF20BD6D /* Pods-Edibili-Buddy-ProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-ProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-ProjectUITests/Pods-Edibili-Buddy-ProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		69438ED282378FF8FB753E4F /* Pods-Edibili-Buddy-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-Project/Pods-Edibili-Buddy-Project.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,10 +121,10 @@
 			isa = PBXGroup;
 			children = (
 				4026F68C1FB91E0500093D87 /* AppDelegate.swift */,
-				4026F6BB1FB91F8400093D87 /* SwiftyRecordButton.swift */,
-				40D897751FBD0D31003B4486 /* PhotoViewController.swift */,
-				4026F6BF1FB91F8400093D87 /* VideoViewController.swift */,
-				4026F68E1FB91E0500093D87 /* ViewController.swift */,
+				40D897791FBD0FC0003B4486 /* PhotoViewController.swift */,
+				40D897771FBD0FC0003B4486 /* SwiftyRecordButton.swift */,
+				40D897781FBD0FC0003B4486 /* VideoViewController.swift */,
+				40D8977A1FBD0FC0003B4486 /* ViewController.swift */,
 				4026F6901FB91E0500093D87 /* Main.storyboard */,
 				4026F6931FB91E0500093D87 /* Assets.xcassets */,
 				4026F6951FB91E0500093D87 /* LaunchScreen.storyboard */,
@@ -467,11 +467,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4026F6C21FB91F8500093D87 /* SwiftyRecordButton.swift in Sources */,
-				4026F68F1FB91E0500093D87 /* ViewController.swift in Sources */,
-				4026F6C61FB91F8500093D87 /* VideoViewController.swift in Sources */,
+				40D8977E1FBD0FC0003B4486 /* ViewController.swift in Sources */,
+				40D8977B1FBD0FC0003B4486 /* SwiftyRecordButton.swift in Sources */,
+				40D8977D1FBD0FC0003B4486 /* PhotoViewController.swift in Sources */,
 				4026F68D1FB91E0500093D87 /* AppDelegate.swift in Sources */,
-				40D897761FBD0D31003B4486 /* PhotoViewController.swift in Sources */,
+				40D8977C1FBD0FC0003B4486 /* VideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
