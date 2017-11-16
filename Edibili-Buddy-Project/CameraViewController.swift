@@ -17,7 +17,11 @@ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 import UIKit
 import SwiftyCam
 
-class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
+protocol holdImagesToSendToAI {
+    func pass(uiImageArray: [UIImage], sendImages: Bool)
+}
+
+class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate, holdImagesToSendToAI {
     
     @IBOutlet weak var captureButton: SwiftyRecordButton!
     @IBOutlet weak var flipCameraButton: UIButton!
@@ -25,6 +29,9 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     @IBOutlet weak var cameraRollButton: UIButton!
     @IBOutlet weak var CancelButton: UIButton!
     
+    var delegate: holdImagesToSendToAI?
+    var imageArray: [UIImage] = []
+    var sendToAI: Bool = false
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -35,6 +42,20 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         allowAutoRotate = true
         audioEnabled = true
 	}
+    
+    init(delegate: holdImagesToSendToAI) {
+        self.delegate = delegate
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    func pass(uiImageArray: [UIImage], sendImages: Bool) { //conforms to protocol
+        imageArray = uiImageArray
+        sendToAI = sendImages
+    }
 
 	override var prefersStatusBarHidden: Bool {
 		return true
@@ -44,10 +65,16 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
 		super.viewDidAppear(animated)
         captureButton.delegate = self
         self.tabBarController?.tabBar.isHidden = true
+        if sendToAI {
+            sendToAI = false
+            self.tabBarController?.tabBar.isHidden = false
+            //after it is sent to the ai we need to go to the gallary
+            tabBarController?.selectedIndex = 2
+        }
 	}
 
 	func swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage) {
-		let newVC = PhotoViewController(image: photo)
+        let newVC = PhotoViewController(image: photo, delegate: self, imageArray: imageArray)
 		self.present(newVC, animated: true, completion: nil)
 	}
 
@@ -93,9 +120,17 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
-        self.tabBarController?.tabBar.isHidden = false
-        
-        tabBarController?.selectedIndex = 0
+        //make sure the know their images will disappear
+        let alert = UIAlertController(title: "Cancel Clicked", message: "If you leave page you will lose all your pictures", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Stay", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Leave", style: UIAlertActionStyle.cancel, handler: { action in
+            self.imageArray = []
+            
+            self.tabBarController?.tabBar.isHidden = false
+            
+            self.tabBarController?.selectedIndex = 0
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
