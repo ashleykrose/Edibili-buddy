@@ -22,6 +22,8 @@ class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
     @IBOutlet weak var captureButton: SwiftyRecordButton!
     @IBOutlet weak var flipCameraButton: UIButton!
     @IBOutlet weak var flashButton: UIButton!
+    @IBOutlet weak var cameraRollButton: UIButton!
+    @IBOutlet weak var CancelButton: UIButton!
     
     
 	override func viewDidLoad() {

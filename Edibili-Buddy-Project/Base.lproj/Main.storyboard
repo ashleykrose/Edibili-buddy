@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hke-fJ-4fX" customClass="SwiftyRecordButton" customModule="Edibili_Buddy_Project" customModuleProvider="target">
-                                <rect key="frame" x="150" y="572" width="75" height="75"/>
+                                <rect key="frame" x="150" y="562" width="75" height="75"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="8Mb-dy-Ned"/>
@@ -31,36 +31,65 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-sy-kuv">
-                                <rect key="frame" x="70" y="598" width="30" height="23"/>
+                                <rect key="frame" x="319" y="30" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Ag0-qQ-6ip"/>
+                                    <constraint firstAttribute="height" constant="30" id="chb-Nx-U5M"/>
+                                </constraints>
                                 <state key="normal" image="flipCamera"/>
                                 <connections>
                                     <action selector="cameraSwitchTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Du6-FK-hjA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stR-Rn-UdV">
-                                <rect key="frame" x="275" y="594" width="18" height="30"/>
+                                <rect key="frame" x="299" y="584.5" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8dD-oU-QV8"/>
-                                    <constraint firstAttribute="width" constant="18" id="rLN-FU-RYb"/>
+                                    <constraint firstAttribute="width" constant="30" id="rLN-FU-RYb"/>
                                 </constraints>
                                 <state key="normal" image="flashOutline"/>
                                 <connections>
                                     <action selector="toggleFlashTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C5u-0g-Kim"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXB-Ek-LsY">
+                                <rect key="frame" x="26" y="30" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="UQF-Ws-BCg"/>
+                                    <constraint firstAttribute="height" constant="30" id="tG1-iP-qMP"/>
+                                </constraints>
+                                <state key="normal" title="Cancel Button" image="cancel"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfO-lt-RnU">
+                                <rect key="frame" x="46" y="584" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Yp0-Tq-ToB"/>
+                                    <constraint firstAttribute="width" constant="30" id="emc-BL-06u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="photoLibrary">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="hke-fJ-4fX" secondAttribute="bottom" constant="20" symbolic="YES" id="0OM-Pc-Ze1"/>
+                            <constraint firstAttribute="bottom" secondItem="hke-fJ-4fX" secondAttribute="bottom" constant="30" id="0OM-Pc-Ze1"/>
                             <constraint firstItem="hke-fJ-4fX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="22M-gB-uKl"/>
-                            <constraint firstItem="stR-Rn-UdV" firstAttribute="leading" secondItem="hke-fJ-4fX" secondAttribute="trailing" constant="50" id="4S2-fF-Ta9"/>
-                            <constraint firstItem="hS2-sy-kuv" firstAttribute="centerY" secondItem="hke-fJ-4fX" secondAttribute="centerY" id="AuI-5x-aKM"/>
-                            <constraint firstItem="hke-fJ-4fX" firstAttribute="leading" secondItem="hS2-sy-kuv" secondAttribute="trailing" constant="50" id="fY6-aF-vVL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="stR-Rn-UdV" secondAttribute="trailing" constant="30" id="2hc-ij-2kM"/>
+                            <constraint firstItem="yXB-Ek-LsY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="30" id="WQb-og-Dld"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hS2-sy-kuv" secondAttribute="trailing" constant="10" id="ajp-wl-sPw"/>
+                            <constraint firstItem="yXB-Ek-LsY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="csx-Uo-cQL"/>
+                            <constraint firstItem="bfO-lt-RnU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="gg3-ln-nvr"/>
+                            <constraint firstItem="bfO-lt-RnU" firstAttribute="centerY" secondItem="hke-fJ-4fX" secondAttribute="centerY" id="h0q-IG-RLV"/>
                             <constraint firstItem="stR-Rn-UdV" firstAttribute="centerY" secondItem="hke-fJ-4fX" secondAttribute="centerY" id="sJP-2Z-GAn"/>
+                            <constraint firstItem="hS2-sy-kuv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="30" id="x8S-Xs-jy1"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="camera" selectedImage="camera" id="9SU-uM-AU5"/>
                     <connections>
+                        <outlet property="CancelButton" destination="yXB-Ek-LsY" id="lGK-Lv-rNq"/>
+                        <outlet property="cameraRollButton" destination="bfO-lt-RnU" id="5JA-m1-Lgb"/>
                         <outlet property="captureButton" destination="hke-fJ-4fX" id="nng-T2-6kL"/>
                         <outlet property="flashButton" destination="stR-Rn-UdV" id="WAJ-Ik-VF7"/>
                         <outlet property="flipCameraButton" destination="hS2-sy-kuv" id="lWF-Wl-Vg1"/>
@@ -189,8 +218,10 @@
     <resources>
         <image name="about" width="24" height="24"/>
         <image name="camera" width="24" height="24"/>
+        <image name="cancel" width="30" height="30"/>
         <image name="flashOutline" width="18" height="30"/>
         <image name="flipCamera" width="30" height="23"/>
         <image name="gallary" width="24" height="24"/>
+        <image name="photoLibrary" width="24" height="24"/>
     </resources>
 </document>
