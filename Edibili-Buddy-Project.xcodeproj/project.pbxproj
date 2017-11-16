@@ -16,6 +16,7 @@
 		4026F6AD1FB91E0500093D87 /* Edibili_Buddy_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6AC1FB91E0500093D87 /* Edibili_Buddy_ProjectUITests.swift */; };
 		4026F6C21FB91F8500093D87 /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6BB1FB91F8400093D87 /* SwiftyRecordButton.swift */; };
 		4026F6C61FB91F8500093D87 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026F6BF1FB91F8400093D87 /* VideoViewController.swift */; };
+		40D897761FBD0D31003B4486 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D897751FBD0D31003B4486 /* PhotoViewController.swift */; };
 		665C01E1425749B162627A21 /* Pods_Edibili_Buddy_ProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A5ED3F044DE7D000C1DDAD /* Pods_Edibili_Buddy_ProjectTests.framework */; };
 		A17A0D3274F7CBBEDB229363 /* Pods_Edibili_Buddy_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DF0B4BB73FF0506A1D2A3E /* Pods_Edibili_Buddy_Project.framework */; };
 		EE8F7D500AA595A5138794E5 /* Pods_Edibili_Buddy_ProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4939D96D5C925EC87A98E112 /* Pods_Edibili_Buddy_ProjectUITests.framework */; };
@@ -58,6 +59,7 @@
 		4026F6AE1FB91E0500093D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4026F6BB1FB91F8400093D87 /* SwiftyRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRecordButton.swift; sourceTree = "<group>"; };
 		4026F6BF1FB91F8400093D87 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		40D897751FBD0D31003B4486 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		4939D96D5C925EC87A98E112 /* Pods_Edibili_Buddy_ProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Edibili_Buddy_ProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58BD5C8F7419D555EF20BD6D /* Pods-Edibili-Buddy-ProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-ProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-ProjectUITests/Pods-Edibili-Buddy-ProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		69438ED282378FF8FB753E4F /* Pods-Edibili-Buddy-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-Project/Pods-Edibili-Buddy-Project.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				4026F68C1FB91E0500093D87 /* AppDelegate.swift */,
 				4026F6BB1FB91F8400093D87 /* SwiftyRecordButton.swift */,
+				40D897751FBD0D31003B4486 /* PhotoViewController.swift */,
 				4026F6BF1FB91F8400093D87 /* VideoViewController.swift */,
 				4026F68E1FB91E0500093D87 /* ViewController.swift */,
 				4026F6901FB91E0500093D87 /* Main.storyboard */,
@@ -468,6 +471,7 @@
 				4026F68F1FB91E0500093D87 /* ViewController.swift in Sources */,
 				4026F6C61FB91F8500093D87 /* VideoViewController.swift in Sources */,
 				4026F68D1FB91E0500093D87 /* AppDelegate.swift in Sources */,
+				40D897761FBD0D31003B4486 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
