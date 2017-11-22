@@ -181,13 +181,78 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         //this is where we are sending the image to the AI.
         //backgroundImage is the image to send to the AI
         //empty imageArray after sending them to the AI
-        
+        myImageUploadRequest(myImage: imageArray[0])
         
         
         //pass delegate back
         self.tabBarController?.tabBar.isHidden = false
         //after it is sent to the ai we need to go to the gallary
         tabBarController?.selectedIndex = 2
+    }
+    
+    func myImageUploadRequest(myImage: UIImage) {
+        let param = [
+            "Confidence" : "2",
+            "Decision" : "1",
+        ]
+        let myUrl = NSURL(string: "http://18.221.34.112/connectApp.php");
+        let request = NSMutableURLRequest(url:myUrl! as URL);
+        request.httpMethod = "POST";
+        let boundary = generateBoundaryString()
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        //changed!!!
+        let imageData = UIImageJPEGRepresentation(myImage, 1)
+        if(imageData==nil)  { return; }
+        request.httpBody = createBodyWithParameters(parameters: param, filePathKey: "file", imageDataKey: imageData!, boundary: boundary)
+//        myActivityIndicator.startAnimating();
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            if error != nil {
+                print("error=\(error)")
+                return
+            }
+            // You can print out response object
+            print("******* response = \(response)")
+            // Print out reponse body
+            print("-------DATA: \(data)")
+            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            print("****** response data = \(responseString!)")
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: []) as? NSDictionary
+                print(json)
+//                DispatchQueue.main.async(execute: {
+////                    self.myActivityIndicator.stopAnimating()
+//                    self.myImageView.image = nil;
+//                });
+            } catch {
+                print(error)
+            }
+        }
+        task.resume()
+    }
+    
+    func generateBoundaryString() -> String {
+        return "Boundary-\(NSUUID().uuidString)"
+    }
+    
+    func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: Data, boundary: String) -> Data {
+        var body = Data();
+        if parameters != nil {
+            for (key, value) in parameters! {
+                body.append(Data("--\(boundary)\r\n".utf8))
+                body.append(Data("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n".utf8))
+                body.append(Data("\(value)\r\n".utf8))
+            }
+        }
+        let filename = "user-profile.jpg"
+        let mimetype = "image/jpg"
+        body.append(Data("--\(boundary)\r\n".utf8))
+        body.append(Data("Content-Disposition: form-data; name=\"\(filePathKey!)\"; filename=\"\(filename)\"\r\n".utf8))
+        body.append(Data("Content-Type: \(mimetype)\r\n\r\n".utf8))
+        body.append(imageDataKey as Data)
+        body.append(Data("\r\n".utf8))
+        body.append(Data("--\(boundary)--\r\n".utf8))
+        return body
     }
 }
 

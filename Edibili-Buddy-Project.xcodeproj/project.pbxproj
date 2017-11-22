@@ -16,9 +16,9 @@
 		40D8977B1FBD0FC0003B4486 /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D897771FBD0FC0003B4486 /* SwiftyRecordButton.swift */; };
 		40D8977D1FBD0FC0003B4486 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D897791FBD0FC0003B4486 /* PhotoViewController.swift */; };
 		40D8977E1FBD0FC0003B4486 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8977A1FBD0FC0003B4486 /* CameraViewController.swift */; };
-		7E52F6431FBD125000A21F86 /* SwiftyCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E52F6421FBD125000A21F86 /* SwiftyCam.framework */; };
-		7E52F6441FBD126800A21F86 /* SwiftyCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E52F6421FBD125000A21F86 /* SwiftyCam.framework */; };
-		7E52F6451FBD126800A21F86 /* SwiftyCam.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E52F6421FBD125000A21F86 /* SwiftyCam.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7E65E92B1FC50DF000FC7764 /* SwiftyCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E65E92A1FC50DF000FC7764 /* SwiftyCam.framework */; };
+		7E65E92C1FC50DF500FC7764 /* SwiftyCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E65E92A1FC50DF000FC7764 /* SwiftyCam.framework */; };
+		7E65E92D1FC50DF500FC7764 /* SwiftyCam.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E65E92A1FC50DF000FC7764 /* SwiftyCam.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A17A0D3274F7CBBEDB229363 /* Pods_Edibili_Buddy_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DF0B4BB73FF0506A1D2A3E /* Pods_Edibili_Buddy_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,13 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		7E52F6461FBD126800A21F86 /* Embed Frameworks */ = {
+		7E65E92E1FC50DF600FC7764 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7E52F6451FBD126800A21F86 /* SwiftyCam.framework in Embed Frameworks */,
+				7E65E92D1FC50DF500FC7764 /* SwiftyCam.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,7 +74,7 @@
 		40D8977A1FBD0FC0003B4486 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		58BD5C8F7419D555EF20BD6D /* Pods-Edibili-Buddy-ProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-ProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-ProjectUITests/Pods-Edibili-Buddy-ProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		69438ED282378FF8FB753E4F /* Pods-Edibili-Buddy-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-Project/Pods-Edibili-Buddy-Project.release.xcconfig"; sourceTree = "<group>"; };
-		7E52F6421FBD125000A21F86 /* SwiftyCam.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyCam.framework; path = "../../../Library/Developer/Xcode/DerivedData/Edibili-Buddy-Project-grimfikqfxrhrmcfpevoruencgij/Build/Products/Debug-iphoneos/SwiftyCam/SwiftyCam.framework"; sourceTree = "<group>"; };
+		7E65E92A1FC50DF000FC7764 /* SwiftyCam.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyCam.framework; path = "../../Library/Developer/Xcode/DerivedData/Edibili-Buddy-Project-bqbylwpokzxximflpbdbiabuyvdz/Build/Products/Debug-iphoneos/SwiftyCam/SwiftyCam.framework"; sourceTree = "<group>"; };
 		944A86B406F4476708A90E50 /* Pods-Edibili-Buddy-ProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-ProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-ProjectUITests/Pods-Edibili-Buddy-ProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4E23E0B7716A33805E72053 /* Pods-Edibili-Buddy-ProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-ProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-ProjectTests/Pods-Edibili-Buddy-ProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,8 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E52F6431FBD125000A21F86 /* SwiftyCam.framework in Frameworks */,
-				7E52F6441FBD126800A21F86 /* SwiftyCam.framework in Frameworks */,
+				7E65E92B1FC50DF000FC7764 /* SwiftyCam.framework in Frameworks */,
+				7E65E92C1FC50DF500FC7764 /* SwiftyCam.framework in Frameworks */,
 				A17A0D3274F7CBBEDB229363 /* Pods_Edibili_Buddy_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,7 +165,7 @@
 		CDD83F541EE8CD5C18B3249D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7E52F6421FBD125000A21F86 /* SwiftyCam.framework */,
+				7E65E92A1FC50DF000FC7764 /* SwiftyCam.framework */,
 				18DF0B4BB73FF0506A1D2A3E /* Pods_Edibili_Buddy_Project.framework */,
 			);
 			name = Frameworks;
@@ -197,7 +197,7 @@
 				4026F6871FB91E0500093D87 /* Resources */,
 				13D476CEA4FD14BA56B4F7D5 /* [CP] Embed Pods Frameworks */,
 				F03AFC0048B4FA68C96DF23D /* [CP] Copy Pods Resources */,
-				7E52F6461FBD126800A21F86 /* Embed Frameworks */,
+				7E65E92E1FC50DF600FC7764 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
