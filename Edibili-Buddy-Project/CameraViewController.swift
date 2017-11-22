@@ -181,8 +181,9 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         //this is where we are sending the image to the AI.
         //backgroundImage is the image to send to the AI
         //empty imageArray after sending them to the AI
-        myImageUploadRequest(myImage: imageArray[0])
-        
+        for picture in imageArray {
+            myImageUploadRequest(myImage: picture)
+        }
         
         //pass delegate back
         self.tabBarController?.tabBar.isHidden = false
