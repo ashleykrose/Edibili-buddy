@@ -21,7 +21,7 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         //call class to get images from server
-        
+        retrieveImages()
         collectionView.reloadData()
     }
     
