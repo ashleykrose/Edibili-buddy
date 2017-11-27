@@ -87,7 +87,7 @@ class PhotoViewController: UIViewController, holdImagesToSendToAI {
             print("IN ARRAY")
             myImageUploadRequest(myImage: picture)
         }
-        
+        imageArray = []
         //pass delegate back
         delegate.pass(uiImageArray: imageArray, sendImages: true)
     }

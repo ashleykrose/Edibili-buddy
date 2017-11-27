@@ -184,7 +184,7 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
         for picture in imageArray {
             myImageUploadRequest(myImage: picture)
         }
-        
+        imageArray = []
         //pass delegate back
         self.tabBarController?.tabBar.isHidden = false
         //after it is sent to the ai we need to go to the gallary
