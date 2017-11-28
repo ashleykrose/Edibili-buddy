@@ -122,8 +122,11 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
                     
                     //change url to image
                     let url = URL(string: imageURL)
+                    print("url")
                     let data = try? Data(contentsOf: url!)
+                    print("data")
                     let image: UIImage! = UIImage(data: data!)
+                    print("image")
                     
                     //check if image is already in array
                     var addData = false
