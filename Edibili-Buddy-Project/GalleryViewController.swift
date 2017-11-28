@@ -29,6 +29,7 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("view Will Appear")
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
         self.retrieveImages()
@@ -75,6 +76,7 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func retrieveImages() {
+        print("retrieve image")
         let URL_IMAGES:String = "http://18.221.34.112/sendImage.php"
         //created NSURL
         let requestURL = NSURL(string: URL_IMAGES)

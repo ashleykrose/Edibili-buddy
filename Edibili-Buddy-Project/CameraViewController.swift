@@ -221,10 +221,6 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: []) as? NSDictionary
                 print(json)
-//                DispatchQueue.main.async(execute: {
-////                    self.myActivityIndicator.stopAnimating()
-//                    self.myImageView.image = nil;
-//                });
             } catch {
                 print(error)
             }
