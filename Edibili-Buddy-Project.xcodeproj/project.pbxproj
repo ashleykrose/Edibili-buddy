@@ -16,6 +16,7 @@
 		40D8977B1FBD0FC0003B4486 /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D897771FBD0FC0003B4486 /* SwiftyRecordButton.swift */; };
 		40D8977D1FBD0FC0003B4486 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D897791FBD0FC0003B4486 /* PhotoViewController.swift */; };
 		40D8977E1FBD0FC0003B4486 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8977A1FBD0FC0003B4486 /* CameraViewController.swift */; };
+		7E308D141FCCEE7D00A6176C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E308D131FCCEE7D00A6176C /* AboutViewController.swift */; };
 		7E38587B1FCB468D00CC8778 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E38587A1FCB468D00CC8778 /* GalleryViewController.swift */; };
 		7E38587D1FCB47B700CC8778 /* CustomCellClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E38587C1FCB47B700CC8778 /* CustomCellClass.swift */; };
 		7E38587F1FCB7C4100CC8778 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E38587E1FCB7C4100CC8778 /* DetailViewController.swift */; };
@@ -75,6 +76,7 @@
 		40D8977A1FBD0FC0003B4486 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		58BD5C8F7419D555EF20BD6D /* Pods-Edibili-Buddy-ProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-ProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-ProjectUITests/Pods-Edibili-Buddy-ProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		69438ED282378FF8FB753E4F /* Pods-Edibili-Buddy-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edibili-Buddy-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edibili-Buddy-Project/Pods-Edibili-Buddy-Project.release.xcconfig"; sourceTree = "<group>"; };
+		7E308D131FCCEE7D00A6176C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		7E3858781FCB448000CC8778 /* Pods_Edibili_Buddy_Project.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Edibili_Buddy_Project.framework; path = "Pods/../build/Debug-iphoneos/Pods_Edibili_Buddy_Project.framework"; sourceTree = "<group>"; };
 		7E38587A1FCB468D00CC8778 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		7E38587C1FCB47B700CC8778 /* CustomCellClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellClass.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				4026F6931FB91E0500093D87 /* Assets.xcassets */,
 				4026F6951FB91E0500093D87 /* LaunchScreen.storyboard */,
 				4026F6981FB91E0500093D87 /* Info.plist */,
+				7E308D131FCCEE7D00A6176C /* AboutViewController.swift */,
 			);
 			path = "Edibili-Buddy-Project";
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				40D8977D1FBD0FC0003B4486 /* PhotoViewController.swift in Sources */,
 				4026F68D1FB91E0500093D87 /* AppDelegate.swift in Sources */,
 				7E38587D1FCB47B700CC8778 /* CustomCellClass.swift in Sources */,
+				7E308D141FCCEE7D00A6176C /* AboutViewController.swift in Sources */,
 				7E38587F1FCB7C4100CC8778 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

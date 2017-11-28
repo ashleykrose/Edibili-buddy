@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     
     var image: UIImage!
     var food: String!
-    var confidence: Int!
+    var confidence: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()

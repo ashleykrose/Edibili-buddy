@@ -11,33 +11,44 @@ import UIKit
 
 class GalleryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     var currentIndex = -1
+    let myGroup = DispatchGroup()
     
     @IBOutlet var collectionView: UICollectionView!
     
-    //delete!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    var items: [UIImage] = ["😀".image()!,"😁".image()!,"😂".image()!,"😃".image()!,"😄".image()!,"😅".image()!,"😆".image()!,"😇".image()!,"😈".image()!,"👿".image()!,"😉".image()!,"😊".image()!,"😋".image()!,"😌".image()!,"😍".image()!,"😎".image()!,"😏".image()!,"😐".image()!,"😑".image()!,"😒".image()!,"😓".image()!,"😔".image()!,"😕".image()!,"😖".image()!,"😗".image()!,"😘".image()!,"😙".image()!,"😚".image()!,"😛".image()!,"😜".image()!,"😝".image()!,"😞".image()!,"😟".image()!,"😠".image()!,"😡".image()!,"😢".image()!,"😣".image()!,"😤".image()!,"😥".image()!,"😦".image()!,"😧".image()!,"😨".image()!,"😩".image()!,"😪".image()!,"😫".image()!,"😬".image()!,"😭".image()!,"😮".image()!,"😯".image()!,"😰".image()!,"😱".image()!,"😲".image()!,"😳".image()!,"😴".image()!,"😵".image()!,"😶".image()!,"😷".image()!]
+    var imageArray: [UIImage] = []
+    var foodArray: [String] = []
+    var confidenceArray: [String] = []
+    var idArray: [String] = []
     
     override func viewDidLoad() {
+        print("view Did Load")
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         //call class to get images from server
-        retrieveImages()
-        collectionView.reloadData()
+        self.retrieveImages()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+        self.retrieveImages()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.tabBarController?.tabBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.isNavigationBarHidden = false
     }
     
     // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return imageArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CustomCellClass
-        cell.myImage.image = items[indexPath.row]
+        cell.myImage.image = imageArray[indexPath.row]
+        cell.myImage.contentMode = .scaleAspectFit
+        cell.myImage.contentMode = .scaleAspectFill
         return cell
     }
     
@@ -98,17 +109,62 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
                     
                     //getting the data at each index
                     let imageURL:String = (images[i] as! NSDictionary)["path"] as! String!
-                    let food:String = (images[i] as! NSDictionary)["id"] as! String!
-                    let confidence:Int = (images[i] as! NSDictionary)["AIconfidence"] as! Int!
+                    let food:String = (images[i] as! NSDictionary)["Decision"] as! String!
+                    let confidence:String = (images[i] as! NSDictionary)["AIconfidence"] as! String!
+                    let id:String = (images[i] as! NSDictionary)["id"] as! String!
                     
                     //displaying the data
                     print("imageURL -> ", imageURL)
                     print("food -> ", food)
                     print("confidence -> ", confidence)
+                    print("id -> ", id)
                     print("===================")
-                    print("")
                     
+                    //change url to image
+                    let url = URL(string: imageURL)
+                    let data = try? Data(contentsOf: url!)
+                    let image: UIImage! = UIImage(data: data!)
+                    
+                    //check if image is already in array
+                    var addData = false
+                    print("ARRAY SIZE: ", self.imageArray.count)
+                    if self.idArray.count > 0 {
+                        for info in self.idArray {
+                            print("info: ",info)
+                            print("id: ",id)
+                            if info == id {
+                                addData = false
+                                break
+                                print("DONT ADD DATA TO ARRAY")
+                            } else {
+                                //add to array
+                                addData = true
+                                print("ADD DATA TO ARRAY")
+                            }
+                        }
+                    } else {
+                        //add to array
+                        addData = true
+                        print("ADD DATA TO ARRAY")
+                    }
+                    
+                    //check if data is to be added
+                    if addData == true {
+                        //add to array
+                        self.imageArray.append(image)
+                        self.foodArray.append(food)
+                        self.confidenceArray.append(confidence)
+                        self.idArray.append(id)
+                        print("DATA IS ADDED TO ARRAY")
+                    } else {
+                        print("DATA WAS NOT ADDED")
+                    }
                 }
+                DispatchQueue.main.async(execute: {
+                    self.collectionView.reloadData()
+                    self.collectionView.collectionViewLayout.invalidateLayout()
+                })
+                print("FINISHED")
                 
             } catch {
                 print(error)
@@ -121,26 +177,10 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailViewController" {
             if let nextView = segue.destination as? DetailViewController {
-                nextView.image = items[currentIndex]
-                nextView.food = "NO"
-                nextView.confidence = 75
+                nextView.image = imageArray[currentIndex]
+                nextView.food = foodArray[currentIndex]
+                nextView.confidence = confidenceArray[currentIndex]
             }
         }
     }
-}
-
-//delete!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-extension String {
-    func image() -> UIImage? {
-        let size = CGSize(width: 30, height: 35)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0);
-        UIColor.white.set()
-        let rect = CGRect(origin: CGPoint(), size: size)
-        UIRectFill(CGRect(origin: CGPoint(), size: size))
-        (self as NSString).draw(in: rect, withAttributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 30)])
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image
-    }
-    
 }
